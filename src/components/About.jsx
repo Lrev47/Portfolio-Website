@@ -39,47 +39,77 @@ function About() {
         <div className="skills">
           <div className="skills__row">
             <div className="skills__item skills__item--html">
-              <img src="./assets/html.png" alt="HTML" />
+              <img
+                src="https://imagizer.imageshack.com/img922/3632/UMgriu.png"
+                alt="HTML"
+              />
               <div className="skills__item-name">HTML</div>
             </div>
             <div className="skills__item skills__item--react">
-              <img src="./assets/react.png" alt="React" />
+              <img
+                src="https://imagizer.imageshack.com/img922/4779/Gtpvc1.png"
+                alt="React"
+              />
               <div className="skills__item-name">REACT</div>
             </div>
             <div className="skills__item skills__item--npm">
-              <img src="./assets/express.png" alt="Express.js" />
+              <img
+                src="https://imagizer.imageshack.com/img922/7062/DHguwO.png"
+                alt="Express.js"
+              />
               <div className="skills__item-name">EXPRESS.JS</div>
             </div>
           </div>
           <div className="skills__row">
             <div className="skills__item skills__item--js">
-              <img src="./assets/js.png" alt="JavaScript" />
+              <img
+                src="https://imagizer.imageshack.com/img922/5992/4NCUb3.png"
+                alt="JavaScript"
+              />
               <div className="skills__item-name">JAVASCRIPT</div>
             </div>
             <div className="skills__item skills__item--css">
-              <img src="./assets/css.png" alt="CSS" />
+              <img
+                src="https://imagizer.imageshack.com/img923/8672/7WeCst.png"
+                alt="CSS"
+              />
               <div className="skills__item-name">CSS</div>
             </div>
             <div className="skills__item skills__item--python">
-              <img src="./assets/mongo.png" alt="MongoDB" />
-              <div className="skills__item-name">MONGODB</div>
+              <img
+                src="https://imagizer.imageshack.com/img923/8932/4uyFY4.png"
+                alt="MongoDB"
+              />
+              <div className="skills__item-name">POSTGRESQL</div>
             </div>
             <div className="skills__item skills__item--git">
-              <img src="./assets/git.png" alt="Git" />
+              <img
+                src="https://imagizer.imageshack.com/img922/8664/8uGrKJ.png"
+                alt="Git"
+              />
               <div className="skills__item-name">GIT</div>
             </div>
           </div>
           <div className="skills__row">
             <div className="skills__item skills__item--sass">
-              <img src="./assets/sass.png" alt="Sass" />
-              <div className="skills__item-name">SASS</div>
+              <img
+                src="https://imagizer.imageshack.com/img923/5948/KK4Usx.png"
+                alt="Sass"
+              />
+              <div className="skills__item-name">REDUX</div>
             </div>
             <div className="skills__item skills__item--webpack">
-              <img src="./assets/nextjs.png" alt="Next.js" />
-              <div className="skills__item-name">NEXT.JS</div>
+              <img
+                src="https://imagizer.imageshack.com/img923/5875/pOeGd7.png"
+                alt="Next.js"
+              />
+              <div className="skills__item-name">PRISMA ORM</div>
             </div>
             <div className="skills__item skills__item--r">
-              <img src="./assets/node.png" alt="Node.js" />
+              <img
+                src="https://imagizer.imageshack.com/img924/6241/dcO3IL.png"
+                alt="Node.js"
+              />
               <div className="skills__item-name">NODE.JS</div>
             </div>
           </div>

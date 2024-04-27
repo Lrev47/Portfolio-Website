@@ -6,6 +6,9 @@ import Hero from "./components/Hero"; // Import the Hero component
 import NavBar from "./components/Header";
 import CanvasDotsBg from "./components/bgCanvas";
 import About from "./components/About";
+import Projects from "./components/Projects";
+import ContactForm from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -15,6 +18,9 @@ function App() {
       <CanvasDotsBg />
       <CanvasDots />
       <About />
+      <Projects />
+      <ContactForm />
+      <Footer />
 
       {/* You can add more components here as your application develops */}
     </div>
