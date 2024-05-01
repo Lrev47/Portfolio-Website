@@ -1,6 +1,5 @@
-// Hero.js
 import React from "react";
-import CanvasDots from "./heroCanvas"; // Ensure this is correctly imported
+import CanvasDots from "./heroCanvas";
 
 function Hero() {
   return (

@@ -20,7 +20,7 @@ function Footer() {
       </a>
       <div className="socials">
         <a
-          href="https://github.com/bscottnz"
+          href="https://github.com/Lrev47"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -32,7 +32,7 @@ function Footer() {
           </div>
         </a>
         <a
-          href="mailto:blscott@gmail.com"
+          href="mailto:luis.revilla47@yahoo.com"
           target="_blank"
           rel="noopener noreferrer"
         >

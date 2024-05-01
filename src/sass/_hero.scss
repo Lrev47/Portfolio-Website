@@ -1,4 +1,6 @@
 .hero {
+  margin-top: 0;
+  padding-top: 0;
   position: relative;
   display: flex;
   height: 100vh;
@@ -7,6 +9,8 @@
 }
 
 .canvas {
+  margin-top: 0;
+  padding-top: 0;
   position: absolute;
   top: 0;
   right: 0;

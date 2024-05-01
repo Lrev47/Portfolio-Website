@@ -13,13 +13,14 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div>
+      {/* <CanvasDots /> */}
       <Hero />
       <NavBar />
       <CanvasDotsBg />
-      <CanvasDots />
       <About />
       <Projects />
       <ContactForm />
+
       <Footer />
 
       {/* You can add more components here as your application develops */}

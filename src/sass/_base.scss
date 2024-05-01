@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
 
 $color-text: #fafafa;
 $color-red: #ff4d5a;
@@ -19,7 +19,7 @@ $color-blue-dark: rgb(50, 22, 187);
 html {
   box-sizing: border-box;
 
-  font-size: 62.5%; // 1 rem = 10 px (browser default is 16)
+  font-size: 80%; // 1 rem = 10 px (browser default is 16)
 
   scroll-behavior: smooth;
 

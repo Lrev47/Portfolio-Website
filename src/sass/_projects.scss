@@ -18,7 +18,7 @@
 
     &:before {
       position: absolute;
-      content: '';
+      content: "";
       border-bottom: 18px solid $color-red;
       width: 22.5rem;
       display: block;
@@ -205,7 +205,7 @@
 
     &:after {
       position: absolute;
-      content: '';
+      content: "";
       height: 2px;
       background-color: $color-red;
 
@@ -259,7 +259,7 @@
 
     &:after {
       position: absolute;
-      content: '';
+      content: "";
       border-bottom: 2px solid $color-red;
 
       width: calc(100% + 2rem);
