@@ -41,7 +41,6 @@
       z-index: -1;
 
       @media (max-width: 770px) {
-        // width: 14rem;
         border-bottom: 14px solid $color-red;
       }
     }
@@ -73,63 +72,18 @@
     &-submit-2 {
       align-self: flex-start;
       margin-top: 0 !important;
-    }
-
-    &-submit {
-      align-self: flex-start;
-      position: relative;
-      // margin-top: 1.5rem;
       padding: 0.6rem 1rem;
       width: fit-content;
-
       font-size: 1.6rem;
       text-transform: uppercase;
       font-weight: 700;
       letter-spacing: 3px;
-      // border-bottom: 2px solid $color-red;
-      z-index: 9;
       cursor: pointer;
+      transition: all 0.3s ease-in-out; // Adding transition for smooth hover effect
 
       &:hover {
-        color: $color-background;
-        font-weight: 700;
-      }
-
-      &:after {
-        position: absolute;
-        content: '';
-        border-bottom: 2px solid $color-red;
-
-        width: calc(100% + 2rem);
-        // height: 100%;
-        left: -14%;
-        top: 0.5rem;
-        display: block;
-        margin: 0 auto;
-        position: relative;
-
-        transform-origin: bottom;
-        transition: all 0.2s;
-
-        // left: -8rem;
-
-        z-index: -1;
-      }
-
-      &:hover:after {
-        transform: scaleY(17.5);
-
-        @media (max-width: 1500px) {
-          transform: scaleY(16.5);
-        }
-
-        @media (max-width: 1200px) {
-          transform: scaleY(14);
-        }
-
-        @media (max-width: 770px) {
-          transform: scaleY(12.5);
-        }
+        color: #000; // Dark color for text
+        background-color: red; // Red background on hover
       }
     }
   }
@@ -163,19 +117,17 @@
     &:focus {
       outline: none;
     }
+
     &::placeholder {
-      /* Chrome, Firefox, Opera, Safari 10.1+ */
       color: rgba($color-text, 0.6);
-      opacity: 1; /* Firefox */
+      opacity: 1;
     }
 
     :-ms-input-placeholder {
-      /* Internet Explorer 10-11 */
       color: rgba($color-text, 0.6);
     }
 
     ::-ms-input-placeholder {
-      /* Microsoft Edge */
       color: rgba($color-text, 0.6);
     }
   }
@@ -196,7 +148,6 @@
   font-weight: 500;
   line-height: 1.5;
 
-  // all form error messages
   & > * {
     display: none;
   }
