@@ -7,18 +7,31 @@ function ContactForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    // You can integrate form validation or handling here
-    // For now, just log the form data to the console
-    console.log({ name, email, message });
 
-    // Here you would typically handle the POST request, perhaps using fetch or axios
+    const formData = new FormData();
+    formData.append("form-name", "contact");
+    formData.append("name", name);
+    formData.append("email", email);
+    formData.append("message", message);
+
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      });
+      alert("Form successfully submitted!");
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("Submission failed. Please try again.");
+    }
   };
 
   return (
     <section className="contact" id="contact">
       <h2 className="contact__heading section-heading">Contact</h2>
       <p className="contact__text">
-        Have a question or want to work together? Leave your details and I'll
+        Have a question or want to work together? Leave your details, and I'll
         get back to you as soon as possible.
       </p>
 
