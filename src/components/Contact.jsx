@@ -1,29 +1,35 @@
 import React, { useState } from "react";
 
+function encode(data) {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
 function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [botField, setBotField] = useState(""); // Honeypot field
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
 
-    const formData = new FormData();
-    formData.append("form-name", "contact");
-    formData.append("name", name);
-    formData.append("email", email);
-    formData.append("message", message);
-    formData.append("bot-field", botField);
+    const formData = {
+      "form-name": "contact",
+      name,
+      email,
+      message,
+      "bot-field": botField,
+    };
 
-    // Posting form data to Netlify
     fetch("/", {
       method: "POST",
-      body: new URLSearchParams(formData).toString(),
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode(formData),
     })
       .then(() => alert("Form submission successful"))
-      .catch((error) => alert("Form submission failed"));
+      .catch((error) => alert("Form submission failed: " + error));
 
     // Reset the form fields
     setName("");
