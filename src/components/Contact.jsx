@@ -23,7 +23,7 @@ function ContactForm() {
       "bot-field": botField,
     };
 
-    fetch("/contact", {
+    fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode(formData),
