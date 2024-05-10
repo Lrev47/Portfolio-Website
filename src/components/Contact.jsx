@@ -22,7 +22,15 @@ function ContactForm() {
         get back to you as soon as possible.
       </p>
 
-      <form className="contact__form" onSubmit={handleSubmit}>
+      <form
+        className="contact__form"
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        onSubmit={handleSubmit}
+      >
+        <input type="hidden" name="form-name" value="contact" />
+
         <input
           className="contact__form-name"
           type="text"
@@ -35,7 +43,7 @@ function ContactForm() {
         <input
           className="contact__form-email"
           type="email"
-          name="_replyto"
+          name="email"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -60,7 +68,6 @@ function ContactForm() {
             className="contact__form-submit-2 project__live-2"
             id="form-submit"
           >
-            
             Submit
           </button>
         </div>
