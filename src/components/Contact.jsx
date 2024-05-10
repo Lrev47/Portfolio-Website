@@ -23,6 +23,8 @@ function ContactForm() {
       "bot-field": botField,
     };
 
+    console.log("Submitting form data:", formData); // Debug output
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
