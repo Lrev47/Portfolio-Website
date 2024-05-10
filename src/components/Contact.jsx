@@ -10,7 +10,7 @@ function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [botField, setBotField] = useState("");
+  const [botField, setBotField] = useState(""); // Honeypot field
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -23,7 +23,7 @@ function ContactForm() {
       "bot-field": botField,
     };
 
-    fetch("/", {
+    fetch("/contact", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode(formData),
