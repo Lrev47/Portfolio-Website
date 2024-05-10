@@ -23,13 +23,23 @@ function ContactForm() {
       "bot-field": botField,
     };
 
+    console.log("Submitting form data:", formData);
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode(formData),
     })
-      .then(() => alert("Form submission successful"))
-      .catch((error) => alert("Form submission failed: " + error));
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Form submission failed");
+        }
+        alert("Form submission successful");
+      })
+      .catch((error) => {
+        console.error("Form submission error:", error);
+        alert("Form submission failed: " + error.message);
+      });
 
     // Reset the form fields
     setName("");
