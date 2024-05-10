@@ -36,11 +36,11 @@ function ContactForm() {
       </p>
 
       <form
-        className="contact__form"
         name="contact"
         method="POST"
         data-netlify="true"
-        onSubmit={handleSubmit}
+        onSubmit="submit"
+        className="contact__form"
       >
         <input type="hidden" name="form-name" value="contact" />
 
