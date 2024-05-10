@@ -1,51 +1,17 @@
 import React, { useState } from "react";
 
-function encode(data) {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-}
-
 function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [botField, setBotField] = useState(""); // Honeypot field
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+    // You can integrate form validation or handling here
+    // For now, just log the form data to the console
+    console.log({ name, email, message });
 
-    const formData = {
-      "form-name": "contact",
-      name,
-      email,
-      message,
-      "bot-field": botField,
-    };
-
-    console.log("Submitting form data:", formData); // Debug output
-
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode(formData),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Form submission failed");
-        }
-        alert("Form submission successful");
-      })
-      .catch((error) => {
-        console.error("Form submission error:", error);
-        alert("Form submission failed: " + error.message);
-      });
-
-    // Reset the form fields
-    setName("");
-    setEmail("");
-    setMessage("");
-    setBotField("");
+    // Here you would typically handle the POST request, perhaps using fetch or axios
   };
 
   return (
@@ -61,17 +27,8 @@ function ContactForm() {
         name="contact"
         method="POST"
         data-netlify="true"
-        data-netlify-honeypot="bot-field"
         onSubmit={handleSubmit}
       >
-        {/* Honeypot field */}
-        <input
-          type="hidden"
-          name="bot-field"
-          value={botField}
-          onChange={(e) => setBotField(e.target.value)}
-        />
-
         <input type="hidden" name="form-name" value="contact" />
 
         <input
@@ -100,7 +57,20 @@ function ContactForm() {
           onChange={(e) => setMessage(e.target.value)}
         ></textarea>
 
-        <button type="submit">Submit</button>
+        <div className="contact__form-error-submit">
+          <div className="form-error">
+            <div className="form-error__name">Please enter your name.</div>
+            <div className="form-error__email">Please enter a valid email.</div>
+            <div className="form-error__msg">Please enter a message.</div>
+          </div>
+          <button
+            type="submit"
+            className="contact__form-submit-2 project__live-2"
+            id="form-submit"
+          >
+            Submit
+          </button>
+        </div>
       </form>
     </section>
   );
