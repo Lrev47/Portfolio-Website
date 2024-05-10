@@ -10,7 +10,7 @@ function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [botField, setBotField] = useState(""); // Honeypot field
+  const [botField, setBotField] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -22,8 +22,6 @@ function ContactForm() {
       message,
       "bot-field": botField,
     };
-
-    console.log("Submitting form data:", formData);
 
     fetch("/", {
       method: "POST",
@@ -100,20 +98,7 @@ function ContactForm() {
           onChange={(e) => setMessage(e.target.value)}
         ></textarea>
 
-        <div className="contact__form-error-submit">
-          <div className="form-error">
-            <div className="form-error__name">Please enter your name.</div>
-            <div className="form-error__email">Please enter a valid email.</div>
-            <div className="form-error__msg">Please enter a message.</div>
-          </div>
-          <button
-            type="submit"
-            className="contact__form-submit-2 project__live-2"
-            id="form-submit"
-          >
-            Submit
-          </button>
-        </div>
+        <button type="submit">Submit</button>
       </form>
     </section>
   );
