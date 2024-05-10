@@ -4,6 +4,7 @@ function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [botField, setBotField] = useState(""); // Honeypot field
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -13,35 +14,48 @@ function ContactForm() {
     formData.append("name", name);
     formData.append("email", email);
     formData.append("message", message);
+    formData.append("bot-field", botField);
 
-    try {
-      await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
-      });
-      alert("Form successfully submitted!");
-    } catch (error) {
-      console.error("Form submission error:", error);
-      alert("Submission failed. Please try again.");
-    }
+    // Posting form data to Netlify
+    fetch("/", {
+      method: "POST",
+      body: new URLSearchParams(formData).toString(),
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    })
+      .then(() => alert("Form submission successful"))
+      .catch((error) => alert("Form submission failed"));
+
+    // Reset the form fields
+    setName("");
+    setEmail("");
+    setMessage("");
+    setBotField("");
   };
 
   return (
     <section className="contact" id="contact">
       <h2 className="contact__heading section-heading">Contact</h2>
       <p className="contact__text">
-        Have a question or want to work together? Leave your details, and I'll
+        Have a question or want to work together? Leave your details and I'll
         get back to you as soon as possible.
       </p>
 
       <form
+        className="contact__form"
         name="contact"
         method="POST"
         data-netlify="true"
-        onSubmit="submit"
-        className="contact__form"
+        data-netlify-honeypot="bot-field"
+        onSubmit={handleSubmit}
       >
+        {/* Honeypot field */}
+        <input
+          type="hidden"
+          name="bot-field"
+          value={botField}
+          onChange={(e) => setBotField(e.target.value)}
+        />
+
         <input type="hidden" name="form-name" value="contact" />
 
         <input
