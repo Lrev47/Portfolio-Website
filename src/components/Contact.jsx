@@ -1,17 +1,24 @@
 import React, { useState } from "react";
+import { useCreateMessageMutation } from "../contactInfoAPI/api";
 
 function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [createMessage, { isLoading, isSuccess, isError, error }] =
+    useCreateMessageMutation();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    // You can integrate form validation or handling here
-    // For now, just log the form data to the console
-    console.log({ name, email, message });
-
-    // Here you would typically handle the POST request, perhaps using fetch or axios
+    try {
+      await createMessage({ name, email, message });
+      // Clear form fields after submission
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (err) {
+      console.error("Failed to send message:", err);
+    }
   };
 
   return (
