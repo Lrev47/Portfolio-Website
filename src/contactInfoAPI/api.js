@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const baseUrl = "http://localhost:8080/api/";
+const baseUrl = "https://backend-for-contact-component.onrender.com/api/";
 
 export const ContactInfoAPI = createApi({
   reducerPath: "ContactInfoAPI",
