@@ -17,7 +17,7 @@ function About() {
               .querySelector(".skills__item--html")
               .classList.add("skills__item-fade-in");
           });
-
+          
           // React
           sleep(1100).then(() => {
             document
