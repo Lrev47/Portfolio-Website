@@ -160,13 +160,7 @@ function About() {
             </svg>
           </div>
           <p className="profile__blurb">
-            Fully committed to the philosophy of life-long learning, I’m a full
-            stack developer with a deep passion for JavaScript, React, and all
-            things web development. The unique combination of creativity, logic,
-            technology, and never running out of new things to discover, drives
-            my excitement and passion for web development. When I’m not at my
-            computer I like to spend my time reading, keeping fit, and playing
-            guitar.
+          Fully committed to the philosophy of life-long learning, I’m a full-stack developer with a deep passion for JavaScript, React, and all things web development. The unique combination of creativity, logic, technology, and the endless opportunities for discovery drives my excitement and passion for web development. I give 100% in everything I do and strive to exceed expectations, not just meet them. When I’m not coding, I enjoy spending time with my family and playing with my son.
           </p>
         </div>
         <div className="skills">
