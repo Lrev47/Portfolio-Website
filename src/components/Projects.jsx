@@ -3,6 +3,17 @@ import React from "react";
 const projectsData = [
   {
     id: 1,
+  title: "MunchPop: Explore the World of Movies and TV Shows",
+  description:
+    "Dive into MunchPop’s extensive collection of movies and TV shows. Discover detailed information, explore genres, and check out viewer ratings to find your next favorite show or movie!",
+    imageUrl: "https://imageshack.com/i/pmXvergsp",
+    liveUrl: "https://munchpopsite.com/",
+    sourceUrl: "https://github.com/Lrev47/PopMunch_Movie-Review-Website",
+    orientation: "right",
+    containerClass: "todo",
+  },
+  {
+    id: 2,
     title: "Mystical Marketplace Ecommerce Website",
     description:
       "Full stack Ecommerce Demo made with, React, Node.js, Express.js, PostgreSQL, Prima ORM and , and Redux.",
@@ -12,17 +23,7 @@ const projectsData = [
     orientation: "left",
     containerClass: "weather",
   },
-  // {
-  //   id: 2,
-  //   title: "Project Number 2",
-  //   description:
-  //     "Instant messaging app built with Next.JS, Firebase, and Chakra UI.",
-  //   imageUrl: "./assets/chatapp.png",
-  //   liveUrl: "https://nextjs-chakra-chatapp-qnhb6dq42-bscottnz.vercel.app/",
-  //   sourceUrl: "https://github.com/bscottnz/nextjs-chakra-chatapp",
-  //   orientation: "right",
-  //   containerClass: "todo",
-  // },
+
   // {
   //   id: 3,
   //   title: "Project Number 3",
