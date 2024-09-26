@@ -1,11 +1,11 @@
 .about {
-  // height: 800px;
   width: 1300px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   display: flex;
+  scroll-margin-top: -50px;
   flex-direction: column;
   align-items: center;
+  padding-top: 2rem; // Moved content up
 
   @media (max-width: 1500px) {
     width: 1100px;
@@ -13,19 +13,12 @@
 
   @media (max-width: 1200px) {
     width: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   &__heading {
-    // &:after {
-    //   content: '';
-    //   border-bottom: 3px solid $color-red;
-    //   width: 15.5rem;
-    //   display: block;
-    //   margin: 0 auto;
-    //   position: relative;
-    //   left: -3rem;
-    // }
-
+    // Existing styles
     &:before {
       position: absolute;
       content: "";
@@ -36,11 +29,9 @@
       position: relative;
       left: 3.5rem;
       top: 6.3rem;
-
       z-index: -1;
 
       @media (max-width: 770px) {
-        // width: 14rem;
         border-bottom: 14px solid $color-red;
       }
     }
@@ -53,6 +44,7 @@
 
     @media (max-width: 1300px) {
       flex-direction: column;
+      align-items: center;
     }
   }
 }
@@ -64,17 +56,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  // background-color: $color-blue-dark;
   font-weight: 500;
+  margin-bottom: 5rem; // Adjusted to move content up
 
   left: -300px;
   opacity: 0;
   transition: all 1.1s;
 
-  // no fade in on small screen
+  // No fade-in on small screen
   @media (max-width: 1301px) {
-    margin-bottom: 10rem;
+    margin-bottom: 7rem;
     left: 0;
     opacity: 1;
   }
@@ -84,27 +75,81 @@
   }
 
   &__picture {
-    height: 24rem;
-    // width: 35rem;
-    margin-bottom: 4rem;
-    // background-color: $color-blue-dark;
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 2rem; // Reduced margin
 
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-    & svg {
-      transition: all 1.1s;
+    justify-content: center;
+
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.4);
+      border: none;
+      color: #fff;
+      font-size: 2rem;
+      padding: 0.5rem;
+      cursor: pointer;
+      z-index: 1;
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+
+      &.left-button {
+        left: 10px;
+      }
+
+      &.right-button {
+        right: 10px;
+      }
+
+      @media (max-width: 600px) {
+        font-size: 1.5rem;
+        padding: 0.4rem;
+
+        &.left-button {
+          left: 5px;
+        }
+
+        &.right-button {
+          right: 5px;
+        }
+      }
+    }
+
+    .profile-image {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+      object-fit: contain;
     }
   }
+
   &__blurb {
     font-size: 1.8rem;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     line-height: 1.8;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 2rem; // Added margin to prevent touching bottom
 
     @media (max-width: 600px) {
-      width: 80vw;
-      margin-left: auto;
-      margin-right: auto;
+      width: 90%;
     }
   }
 
@@ -119,8 +164,10 @@
 }
 
 .skills {
+  // Existing styles remain unchanged
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 
   &__row {
     display: flex;
