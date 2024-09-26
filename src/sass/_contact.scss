@@ -5,11 +5,10 @@
   display: flex;
   width: 500px;
   flex-direction: column;
-  align-items: center;                        
+  align-items: center;
   justify-content: center;
-
   z-index: 10;
-
+  margin-top: 10rem;
   margin-bottom: 10rem;
 
   @media (max-width: 700px) {
@@ -27,9 +26,10 @@
   &__heading {
     margin-top: -4rem !important;
     margin-bottom: 6rem !important;
+
     &:before {
       position: absolute;
-      content: '';
+      content: "";
       border-bottom: 18px solid $color-red;
       width: 21rem;
       display: block;
@@ -37,7 +37,6 @@
       position: relative;
       left: 3.5rem;
       top: 6.3rem;
-
       z-index: -1;
 
       @media (max-width: 770px) {
@@ -71,19 +70,37 @@
 
     &-submit-2 {
       align-self: flex-start;
-      margin-top: 0 !important;
-      padding: 0.6rem 1rem;
+      margin-top: 3rem;
+      padding: 1rem 1.2rem;
       width: fit-content;
       font-size: 1.6rem;
       text-transform: uppercase;
       font-weight: 700;
       letter-spacing: 3px;
       cursor: pointer;
-      transition: all 0.3s ease-in-out; // Adding transition for smooth hover effect
+      position: relative;
+      transition: all 0.25s;
+      z-index: 2;
+
+      &:after {
+        position: absolute;
+        content: "";
+        height: 2px;
+        background-color: $color-red;
+        width: 100%;
+        bottom: 1px;
+        display: block;
+        transform-origin: bottom;
+        transition: all 0.25s;
+        z-index: 3;
+      }
 
       &:hover {
-        color: #000; // Dark color for text
-        background-color: red; // Red background on hover
+        color: $color-red;
+      }
+
+      &:hover:after {
+        height: 100%;
       }
     }
   }
@@ -97,9 +114,7 @@
     background-color: $color-background-light;
     font-size: 1.6rem;
     font-family: monserrat, sans-serif;
-
     border-left: 2px solid transparent;
-
     border-radius: 0;
 
     @media (max-width: 700px) {
