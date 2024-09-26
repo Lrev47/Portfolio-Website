@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const projectsData = [
   {
@@ -94,9 +95,9 @@ const Projects = () => (
       />
     ))}
     <div className="projects__all-projects-button-container">
-      <a href="/all-projects" className="projects__all-projects-button">
+      <Link to="/all-projects" className="projects__all-projects-button">
         All Projects
-      </a>
+      </Link>
     </div>
   </section>
 );
