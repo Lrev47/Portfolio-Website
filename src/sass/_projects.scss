@@ -1,21 +1,11 @@
-// entire projects section
 .projects {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  scroll-margin-top: -50px;
 
   &__heading {
-    // &:after {
-    //   content: '';
-    //   border-bottom: 3px solid $color-red;
-    //   width: 19rem;
-    //   display: block;
-    //   margin: 0 auto;
-    //   position: relative;
-    //   left: -3.5rem;
-    // }
-
     &:before {
       position: absolute;
       content: "";
@@ -26,19 +16,63 @@
       position: relative;
       left: 3.5rem;
       top: 6.3rem;
-
       z-index: -1;
 
       @media (max-width: 770px) {
-        // width: 14rem;
         border-bottom: 14px solid $color-red;
       }
     }
   }
+
+  &__all-projects-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 0rem; // Removed extra space
+
+    // Adjust margin-top if needed
+    // margin-top: 2rem;
+  }
+
+  &__all-projects-button {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 1;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 1rem 1.2rem;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.25s;
+
+    &:after {
+      position: absolute;
+      content: "";
+      height: 2px;
+      background-color: $color-red;
+      width: 100%;
+      bottom: 1px;
+      display: block;
+      transform-origin: bottom;
+      transition: all 0.25s;
+      z-index: -1;
+    }
+
+    &:hover {
+      color: $color-red;
+    }
+
+    &:hover:after {
+      height: 100%;
+    }
+  }
 }
 
-// single project
-
+// Single project styling
 .project {
   position: relative;
   display: flex;
@@ -53,13 +87,15 @@
     margin-bottom: 10rem;
   }
 
+  &--last {
+    margin-bottom: 0; // Remove margin-bottom for the last project
+  }
+
   &__image {
     &-container {
       position: relative;
       height: 70rem;
       width: 100rem;
-
-      // border: 1px solid red;
       background-color: $color-blue-dark;
       transition: all 0.2s;
       cursor: pointer;
@@ -112,13 +148,8 @@
   &__info {
     position: relative;
     top: 8rem;
-
     height: fit-content;
     padding: 1rem;
-
-    // border: 1px solid red;
-    // flex: 1;
-    // left: -20px;
     z-index: 9999999;
 
     @media (max-width: 1000px) {
@@ -146,7 +177,6 @@
     position: relative;
     z-index: 66;
     font-size: 3.5rem;
-    // font-weight: 700;
 
     @media (max-width: 900px) {
       font-size: 3rem;
@@ -158,7 +188,6 @@
 
     @media (max-width: 550px) {
       font-size: 2.5rem;
-      // background-color: rgba($color-background, 0.6);
     }
 
     @media (max-width: 400px) {
@@ -171,7 +200,6 @@
     margin-top: 3rem;
     font-size: 1.8rem;
     font-weight: 500;
-
     z-index: 999909999;
 
     @media (max-width: 560px) {
@@ -179,7 +207,6 @@
     }
   }
 
-  // new button styling that works on higher dpi screen
   &__live-2 {
     font-size: 1.6rem;
     font-weight: 700;
@@ -190,13 +217,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     width: fit-content;
     padding: 1rem 1.2rem;
-
     position: relative;
     margin-top: 3rem;
-
     cursor: pointer;
 
     @media (max-width: 560px) {
@@ -208,17 +232,11 @@
       content: "";
       height: 2px;
       background-color: $color-red;
-
       width: 100%;
       bottom: 1px;
       display: block;
-      // margin: 0 auto;
-
       transform-origin: bottom;
       transition: all 0.25s;
-
-      // left: -8rem;
-
       z-index: -1;
     }
 
@@ -228,83 +246,6 @@
 
     &:hover:after {
       height: 100%;
-    }
-  }
-
-  &__live,
-  &__code {
-    position: relative;
-    margin-top: 3rem;
-    padding: 0.6rem 1rem;
-    width: fit-content;
-
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 3px;
-    // border-bottom: 2px solid $color-red;
-    z-index: 9;
-
-    transition: all 0.2s;
-    cursor: pointer;
-
-    @media (max-width: 560px) {
-      margin-top: 2rem;
-    }
-
-    &:hover {
-      color: $color-background;
-      font-weight: 700;
-    }
-
-    &:after {
-      position: absolute;
-      content: "";
-      border-bottom: 2px solid $color-red;
-
-      width: calc(100% + 2rem);
-      // height: 100%;
-      left: -10%;
-      top: 0.5rem;
-      display: block;
-      margin: 0 auto;
-      position: relative;
-
-      transform-origin: bottom;
-      transition: all 0.2s;
-
-      // left: -8rem;
-
-      z-index: -1;
-    }
-
-    &:hover:after {
-      transform: scaleY(17.5);
-
-      @media (max-width: 1500px) {
-        transform: scaleY(16.5);
-      }
-
-      @media (max-width: 1200px) {
-        transform: scaleY(14);
-      }
-
-      @media (max-width: 770px) {
-        transform: scaleY(12.5);
-      }
-    }
-
-    @media (max-width: 550px) {
-      // font-size: 2.5rem;
-      // background-color: rgba($color-background, 0.6);
-    }
-  }
-
-  &__code {
-    &:after {
-      width: calc(100% + 2rem);
-      left: -8%;
-      // transform: translateX(3px);
     }
   }
 
@@ -325,17 +266,14 @@
       margin-right: -2rem;
 
       @media (max-width: 800px) {
-        // left: -4rem;
         margin-right: -4rem;
       }
 
       @media (max-width: 770px) {
-        // left: -4rem;
         margin-right: -4rem;
       }
 
       @media (max-width: 600px) {
-        // left: -4rem;
         margin-right: -6rem;
       }
 
@@ -363,12 +301,10 @@
       margin-left: -2rem;
 
       @media (max-width: 770px) {
-        // left: -4rem;
         margin-left: -4rem;
       }
 
       @media (max-width: 600px) {
-        // left: -4rem;
         margin-left: -6rem;
       }
 
@@ -394,11 +330,27 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  // z-index: 0;
 }
 
 .weather {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+
+.section-heading {
+  position: relative;
+  font-size: 5.5rem;
+  font-weight: 700;
+  margin-top: 9rem;
+  margin-bottom: 13rem;
+  z-index: 9999;
+
+  @media (max-width: 1200px) {
+    margin-bottom: 10rem;
+  }
+
+  @media (max-width: 1000px) {
+    margin-top: 6rem;
+  }
 }
