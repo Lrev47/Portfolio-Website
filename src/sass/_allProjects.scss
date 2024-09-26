@@ -1,0 +1,47 @@
+// AllProjects.scss
+
+.all-projects {
+  // Set up the container with padding and a max-width
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center; // Center align content
+
+  &__heading {
+    font-size: 2.5rem; // Large heading
+    font-weight: bold;
+    color: #ffffff; // White or customize based on theme
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  &__placeholder {
+    font-size: 1.2rem;
+    color: #aaaaaa; // Light gray for placeholder text
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+  }
+
+  // Add media queries for responsiveness
+  @media (max-width: 768px) {
+    padding: 30px 10px;
+
+    &__heading {
+      font-size: 2rem;
+    }
+
+    &__placeholder {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__heading {
+      font-size: 1.8rem;
+    }
+
+    &__placeholder {
+      font-size: 0.9rem;
+    }
+  }
+}
