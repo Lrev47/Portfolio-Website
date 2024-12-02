@@ -25,8 +25,21 @@ const projectsData = [
     containerClass: "weather",
   },
   // Uncomment the following project if needed
+  {
+    id: 3,
+    title: "AISynthLab: A One stop Shop for AI Creation",
+    description:
+      "A custom-built admin dashboard for managing AI agents, data analytics, financial tracking, and image management. Features include user authentication, version control, drag-and-drop UI for AI workflows, integration with APIs, and PostgreSQL database management.",
+    imageUrl: "https://imagizer.imageshack.com/img924/9162/CibDvJ.png", // Replace with your actual image URL
+    liveUrl: "https://aisynthlab.com/", // Replace with your actual live URL
+    sourceUrl: "https://github.com/Lrev47/AiImageGenFrontEnd", // Replace with your actual repository URL
+    orientation: "right",
+    containerClass: "dashboard",
+  },
+
+  // Uncomment the following project if needed
   // {
-  //   id: 3,
+  //   id: 4,
   //   title: "Admin Dashboard: AI Agent and Workflow Management",
   //   description:
   //     "A custom-built admin dashboard for managing AI agents, data analytics, financial tracking, and image management. Features include user authentication, version control, drag-and-drop UI for AI workflows, integration with APIs, and PostgreSQL database management.",
