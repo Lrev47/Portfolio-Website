@@ -4,6 +4,18 @@ import { Link } from "react-router-dom";
 const projectsData = [
   {
     id: 1,
+    title: "AISynthLab: A One stop Shop for AI Creation",
+    description:
+      "AISynthLab is a platform for creating and managing AI-driven image generation workflows. Advanced image synthesis, and will eventually include AI aduio and video. AISynthLab uses a serverless architeture with highend GPU for rapid and cost effective AI usage. Designed for creativity and scalability, AISynthLab empowers users to bring their visions to life.",
+    imageUrl: "https://imagizer.imageshack.com/img924/9162/CibDvJ.png", // Replace with your actual image URL
+    liveUrl: "https://aisynthlab.com/", // Replace with your actual live URL
+    sourceUrl: "https://github.com/Lrev47/AiImageGenFrontEnd", // Replace with your actual repository URL
+    orientation: "right",
+    containerClass: "weather",
+  },
+
+  {
+    id: 2,
     title: "MunchPop: Explore the World of Movies and TV Shows",
     description:
       "Dive into MunchPop’s extensive collection of movies and TV shows. Discover detailed information, explore genres, and check out viewer ratings to find your next favorite show or movie!",
@@ -14,7 +26,7 @@ const projectsData = [
     containerClass: "todo",
   },
   {
-    id: 2,
+    id: 3,
     title: "Mystical Marketplace Ecommerce Website",
     description:
       "Full stack Ecommerce Demo made with React, Node.js, Express.js, PostgreSQL, Prisma ORM, and Redux.",
@@ -25,17 +37,6 @@ const projectsData = [
     containerClass: "weather",
   },
   // Uncomment the following project if needed
-  {
-    id: 3,
-    title: "AISynthLab: A One stop Shop for AI Creation",
-    description:
-      "A custom-built admin dashboard for managing AI agents, data analytics, financial tracking, and image management. Features include user authentication, version control, drag-and-drop UI for AI workflows, integration with APIs, and PostgreSQL database management.",
-    imageUrl: "https://imagizer.imageshack.com/img924/9162/CibDvJ.png", // Replace with your actual image URL
-    liveUrl: "https://aisynthlab.com/", // Replace with your actual live URL
-    sourceUrl: "https://github.com/Lrev47/AiImageGenFrontEnd", // Replace with your actual repository URL
-    orientation: "right",
-    containerClass: "dashboard",
-  },
 
   // Uncomment the following project if needed
   // {
