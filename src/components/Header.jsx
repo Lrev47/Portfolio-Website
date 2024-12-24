@@ -1,20 +1,32 @@
+// Header.jsx
 import React from "react";
+import { HashLink as Link } from "react-router-hash-link";
+// note: 'HashLink' can be renamed to anything, commonly { HashLink }.
 
 function NavBar() {
   return (
     <nav className="navigation-bar">
       <ul className="navigation">
         <li className="navigation__item navigation__item--active" id="nav-hero">
-          <a href="#hero">Home</a>
+          {/* Notice we use /#hero to ensure we route back to home and then jump to #hero */}
+          <Link smooth to="/#hero">
+            Home
+          </Link>
         </li>
         <li className="navigation__item" id="nav-about">
-          <a href="#about">About</a>
+          <Link smooth to="/#about">
+            About
+          </Link>
         </li>
         <li className="navigation__item" id="nav-projects">
-          <a href="#projects">Projects</a>
+          <Link smooth to="/#projects">
+            Projects
+          </Link>
         </li>
         <li className="navigation__item" id="nav-contact">
-          <a href="#contact">Contact</a>
+          <Link smooth to="/#contact">
+            Contact
+          </Link>
         </li>
       </ul>
     </nav>
