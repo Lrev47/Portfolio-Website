@@ -28,6 +28,9 @@ function NavBar() {
             Contact
           </Link>
         </li>
+        <li className="navigation__item" id="nav-resume">
+          <Link to="/resume">Resume</Link>
+        </li>
       </ul>
     </nav>
   );

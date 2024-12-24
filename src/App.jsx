@@ -9,6 +9,7 @@ import Projects from "./components/Projects";
 import ContactForm from "./components/Contact";
 import Footer from "./components/Footer";
 import AllProjects from "./components/AllProjects"; // Import the AllProjects component
+import Resume from "./components/Resume";
 
 function App() {
   return (
@@ -36,6 +37,17 @@ function App() {
               <NavBar />
               <CanvasDotsBg />
               <AllProjects />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/resume"
+          element={
+            <>
+              <NavBar />
+              <CanvasDotsBg />
+              <Resume />
               <Footer />
             </>
           }

@@ -1,0 +1,49 @@
+.resume-page {
+  position: relative;
+  min-height: 100vh;
+  padding: 2rem; // Reduced padding for a bigger PDF area
+  text-align: center;
+  z-index: 1;
+
+  &__viewer {
+    // Make the PDF viewer large
+    width: 90%; // or 100%, but 90% gives a slight margin on the sides
+    max-width: 1200px; // so it’s not absurdly wide on big screens
+    height: 80vh; // tall enough to show most of the PDF
+    margin: 0 auto 3rem;
+    border: none; // remove the border for a cleaner look
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  &__iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  &__download-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #ff4d5a; // or $color-red
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #e02b3d; // darker shade
+    }
+  }
+
+  &__download-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+}
