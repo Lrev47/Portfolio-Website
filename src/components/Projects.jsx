@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 
 const projectsData = [
   {
@@ -109,7 +109,10 @@ const Projects = () => (
       />
     ))}
     <div className="projects__all-projects-button-container">
-      <Link to="/all-projects" className="projects__all-projects-button">
+      <Link
+        to="/all-projects#all-projects"
+        className="projects__all-projects-button"
+      >
         All Projects
       </Link>
     </div>
