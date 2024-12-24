@@ -5,6 +5,8 @@
   font-size: 2rem;
   font-weight: 500;
   letter-spacing: 1px;
+  z-index: 1;
+  position: absolute;
 
   @media (max-width: 1200px) {
     margin-right: 3rem;
