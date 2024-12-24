@@ -10,14 +10,21 @@ function About() {
     "https://imagizer.imageshack.com/img924/1586/FsgEh8.jpg",
   ];
 
+  // State to track which image index is currently displayed
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Go to the previous image (wrap around if at the first image)
   const prevImage = () => {
-    setCurrentImageIndex(
-      (currentImageIndex - 1 + imageUrls.length) % imageUrls.length
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? imageUrls.length - 1 : prevIndex - 1
     );
   };
 
+  // Go to the next image (wrap around if at the last image)
   const nextImage = () => {
-    setCurrentImageIndex((currentImageIndex + 1) % imageUrls.length);
+    setCurrentIndex((prevIndex) =>
+      prevIndex === imageUrls.length - 1 ? 0 : prevIndex + 1
+    );
   };
 
   useEffect(() => {
@@ -123,14 +130,26 @@ function About() {
       <div className="about__content">
         <div className="profile">
           <div className="profile__picture">
+            {/* Left button */}
             <button onClick={prevImage} className="carousel-button left-button">
               <FaChevronLeft />
             </button>
-            <img
-              src={imageUrls[currentImageIndex]}
-              alt="Profile"
-              className="profile-image"
-            />
+
+            {/* Carousel container */}
+            <div className="carousel-container">
+              {imageUrls.map((url, idx) => (
+                <img
+                  key={idx}
+                  src={url}
+                  alt={`Profile Slide ${idx}`}
+                  className={`carousel-image ${
+                    idx === currentIndex ? "active" : ""
+                  }`}
+                />
+              ))}
+            </div>
+
+            {/* Right button */}
             <button
               onClick={nextImage}
               className="carousel-button right-button"
