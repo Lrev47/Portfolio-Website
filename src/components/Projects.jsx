@@ -2,6 +2,18 @@ import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
 
 const projectsData = [
+
+  {
+    id: 4,
+    title: "MyMarketplace | My 2nd Ecommerce website",
+    description:
+      "My 2nd attepmpt at making an ecommerce website. Now using a 3 layered architecture for the backend, and attempt at creating a professinal UI. Droping the magical goods on this one!",
+    imageUrl: "https://imagizer.imageshack.com/img924/9373/5YdAKD.png", // Replace with your actual image URL
+    liveUrl: "https://mymarketplace4766.com/", // Replace with your actual live URL
+    sourceUrl: "https://github.com/Lrev47/EcommerceV2_FrontEnd", // Replace with your actual repository URL
+    orientation: "left",
+    containerClass: "weather",
+  },
   {
     id: 1,
     title: "AISynthLab: A One stop Shop for AI Creation",
@@ -36,7 +48,9 @@ const projectsData = [
     orientation: "left",
     containerClass: "weather",
   },
+
   // Uncomment the following project if needed
+
 
   // Uncomment the following project if needed
   // {
