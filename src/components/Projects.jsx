@@ -2,7 +2,6 @@ import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
 
 const projectsData = [
-
   {
     id: 4,
     title: "MyMarketplace | My 2nd Ecommerce website",
@@ -15,22 +14,10 @@ const projectsData = [
     containerClass: "weather",
   },
   {
-    id: 1,
-    title: "AISynthLab: A One stop Shop for AI Creation",
-    description:
-      "AISynthLab is a platform for creating and managing AI-driven image generation workflows. Advanced image synthesis, and will eventually include AI aduio and video. AISynthLab uses a serverless architeture with highend GPU for rapid and cost effective AI usage. Designed for creativity and scalability, AISynthLab empowers users to bring their visions to life.",
-    imageUrl: "https://imagizer.imageshack.com/img924/9162/CibDvJ.png", // Replace with your actual image URL
-    liveUrl: "https://aisynthlab.com/", // Replace with your actual live URL
-    sourceUrl: "https://github.com/Lrev47/AiImageGenFrontEnd", // Replace with your actual repository URL
-    orientation: "right",
-    containerClass: "weather",
-  },
-
-  {
     id: 2,
     title: "MunchPop: Explore the World of Movies and TV Shows",
     description:
-      "Dive into MunchPop’s extensive collection of movies and TV shows. Discover detailed information, explore genres, and check out viewer ratings to find your next favorite show or movie!",
+      "Dive into MunchPop's extensive collection of movies and TV shows. Discover detailed information, explore genres, and check out viewer ratings to find your next favorite show or movie!",
     imageUrl: "https://imageshack.com/i/pmXvergsp",
     liveUrl: "https://munchpopsite.com/",
     sourceUrl: "https://github.com/Lrev47/PopMunch_Movie-Review-Website",
